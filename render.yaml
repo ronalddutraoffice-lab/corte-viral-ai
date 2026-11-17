@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: corte-viral-ai
+    runtime: docker
+    plan: free
+    healthCheckPath: /
