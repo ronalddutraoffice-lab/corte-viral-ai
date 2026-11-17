@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Corte Viral AI</title><link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="shell">
+  <header><div class="brand"><div class="logo">✂</div><div><b>CORTE VIRAL <span>AI</span></b><small>Transforme vídeos em cortes prontos</small></div></div><div class="pill"><i></i> Estúdio de criação</div></header>
+  <main>
+    <section class="hero"><div class="eyebrow">SEU ESTÚDIO DE VÍDEOS CURTOS</div><h1>Encontre os momentos<br><span>que merecem virar cortes.</span></h1><p>Envie seu vídeo, deixe a IA analisar a fala e gere versões verticais com legendas automáticas.</p></section>
+    <section class="panel">
+      <div class="section-title"><div class="number">01</div><div><h2>Novo projeto</h2><p>Adicione o vídeo que você tem autorização para editar.</p></div></div>
+      <form id="form">
+        <label for="youtube">Link do YouTube <em>opcional · referência</em></label>
+        <input id="youtube" name="youtube_url" type="url" placeholder="https://www.youtube.com/watch?v=...">
+        <div class="notice">O link é salvo como referência. Para renderizar cortes, envie o arquivo original ou uma cópia obtida com autorização. O sistema não baixa vídeos do YouTube.</div>
+        <label>Arquivo de vídeo <strong>obrigatório para gerar cortes</strong></label>
+        <label class="drop" for="video"><div class="upload-icon">↑</div><b id="fileTitle">Clique para escolher ou arraste seu vídeo aqui</b><small>MP4, MOV, MKV, WEBM ou AVI</small><input id="video" name="video" type="file" accept="video/*" required></label>
+        <div class="settings">
+          <div><label for="count">Quantidade de cortes</label><select id="count" name="count"><option>3</option><option selected>5</option><option>8</option><option>10</option><option>15</option><option>20</option></select></div>
+          <div><label for="length">Duração aproximada</label><select id="length" name="length"><option value="20">20 segundos</option><option value="30">30 segundos</option><option value="45" selected>45 segundos</option><option value="60">60 segundos</option><option value="90">90 segundos</option></select></div>
+        </div>
+        <button id="submit" type="submit">✦ &nbsp; Analisar e gerar cortes</button>
+      </form>
+    </section>
+    <section id="progress" class="panel hidden"><div class="section-title"><div class="number">02</div><div><h2>Processamento</h2><p id="status">Preparando seu projeto…</p></div></div><div class="bar"><span id="bar"></span></div><small class="muted">A primeira análise pode demorar mais enquanto o modelo de transcrição é preparado.</small></section>
+    <section id="results" class="panel hidden"><div class="section-title"><div class="number">03</div><div><h2>Seus cortes</h2><p>Revise cada trecho antes de publicar.</p></div></div><div id="clips" class="clips"></div></section>
+    <section class="tips"><b>✦ Dica para crescer</b><p>Use cortes com contexto, edição própria e comentários ou elementos originais. Ter autorização do vídeo não garante monetização: cada plataforma avalia originalidade e conteúdo reutilizado.</p></section>
+  </main>
+  <footer>CORTE VIRAL AI · MVP local · Feito para criar com responsabilidade</footer>
+</div>
+<script src="/static/app.js"></script>
+</body></html>
